@@ -110,7 +110,7 @@ export default function Review() {
           </div>
         </div>
           <div
-            className="sm:hidden absolute bg-no-repeat bg-cover h-110 w-100 mt-[100px] ml-[180px] z-[-1]"
+            className="sm:hidden absolute bg-no-repeat bg-cover h-110 w-100 mt-[100px] ml-[167px] z-[-1]"
             style={{
               backgroundImage: "url('./bg2.png')",
             }}

@@ -51,7 +51,7 @@ export default function NavBar({ cartCount, cartItems, setCartItems }) {
       </div>
 
       {/* 🌙 Right section - Lamp + Cart + Socials */}
-      <div className="flex items-center max-sm:ml-50">
+      <div className="flex items-center max-sm:ml-40">
         <img src="./lamp.png" alt="" className="w-20 sm:ml-100 max-sm:w-0" />
 
         {/* 🛒 Cart Icon */}

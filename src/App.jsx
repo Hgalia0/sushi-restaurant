@@ -30,7 +30,7 @@ function App() {
             }}
           />
           <div
-            className="sm:hidden absolute inset-0 bg-no-repeat    bg-cover  max-sm:ml-[25px]  max-sm:w-[500px] max-sm:h-[360px]   overflow-hidden z-[-1]"
+            className="sm:hidden absolute inset-0 bg-no-repeat    bg-cover  max-sm:ml-[-3px]  max-sm:w-[500px] max-sm:h-[360px]   overflow-hidden z-[-1]"
             style={{
               backgroundImage: "url('./sushimobile.png')",
             }}
@@ -53,7 +53,7 @@ function App() {
         </div>
 
 
-        <div className='max-sm:mt-[-130px]'>
+        <div className='max-sm:mt-[-80px]'>
 
           <Overly />
         </div>
@@ -69,7 +69,7 @@ function App() {
         <div className='sm:mt-[-70px]max-sm:w-20'>
           <Menuu onAddToCart={handleAddToCart} />
         </div>
-        <div className='sm:mt-[-203px] max-sm:mt-[-250px] '>
+        <div className='sm:mt-[-203px] max-sm:mt-[-180px] '>
           <Review />
         </div>
 

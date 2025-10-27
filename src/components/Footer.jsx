@@ -25,7 +25,8 @@ export default function Footer() {
 
                 <div className='flex items-center max-sm:ml-[-12px]'>
                     <img src="./local.png" alt="" className='w-8' />
-                    <p className="mb-1 text-[#696c70]">Alger centre , Métro khelifa boukhalfa</p>
+                    <p className="mb-1 text-[#696c70]">Alger centre ,<br />
+                     Métro khelifa boukhalfa</p>
                 </div>
                 <div className='flex items-center gap-2 ml-1 max-sm:ml-[-10px]'>
                     <img src="./clock.png" alt="" className='w-6' />
@@ -37,10 +38,10 @@ export default function Footer() {
 
 
 
-                <div className='flex items-center gap-10 max-sm:flex-col max-sm:gap-5 max-sm:whitespace-nowrap max-sm:mt-15'>
+                <div className='flex  items-center gap-10 max-sm:flex-col max-sm:gap-5 max-sm:whitespace-nowrap max-sm:mt-14'>
 
 
-                    <p className="font-bold text-3xl max-sm:text-xl bg-gradient-to-r from-[#efa236] via-[#d49e4d] to-[#a09797] bg-clip-text text-transparent">
+                    <p className="font-bold  max-sm:ml-[-30px] text-3xl max-sm:text-xl bg-gradient-to-r from-[#efa236] via-[#d49e4d] to-[#a09797] bg-clip-text text-transparent">
                         Our platforms:
 
                     </p>
