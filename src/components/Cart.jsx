@@ -1,0 +1,128 @@
+import React, { useState } from "react";
+
+export default function Cart({ cartItems = [], setCartItems }) {
+  const [showInfo, setShowInfo] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    address: "",
+  });
+
+  const totalPrice = cartItems.reduce(
+    (sum, item) => sum + parseFloat(item.price || 0),
+    0
+  );
+
+  const handleOrder = (e) => {
+    e.preventDefault();
+    alert(`Merci ${formData.name}, votre commande est confirmée ! 🍣`);
+    setCartItems([]); // Clear cart
+    setShowInfo(false);
+    setFormData({ name: "", phone: "", address: "" });
+  };
+
+  return (
+    <div className="">
+      <h2 className="text-2xl font-bold mb-4 text-center">🛒 Votre Panier</h2>
+
+      {!showInfo ? (
+        <>
+          {/* 🧾 Cart Items */}
+          {cartItems.length === 0 ? (
+            <p className="text-gray-500 text-center">Aucun article dans le panier.</p>
+          ) : (
+            <>
+              <div className="flex flex-col gap-3 pb-4 overflow-y-auto max-h-60">
+                {cartItems.map((item, i) => (
+                  <div
+                    key={i}
+                    className="flex items-center justify-between bg-gray-100 p-2 rounded-lg"
+                  >
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="w-10 h-10 rounded-lg"
+                    />
+                    <p className="text-sm font-medium">{item.name}</p>
+                    <p className="text-sm text-gray-600">{item.price}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* 💰 Total */}
+              <div className="flex justify-between font-semibold mt-4 border-t pt-2">
+                <span>Total :</span>
+                <span>{totalPrice.toFixed(2)} DA</span>
+              </div>
+
+              {/* 🟠 Commander Button */}
+              <div className="p-4 border-t mt-4">
+                <button
+                  onClick={() => setShowInfo(true)}
+                  className="w-full bg-[#FEAA36] text-white font-semibold py-2 rounded-xl hover:bg-[#e2972e] transition-all"
+                >
+                  Commander
+                </button>
+              </div>
+            </>
+          )}
+        </>
+      ) : (
+        /* 📝 Info Form */
+        <form
+          onSubmit={handleOrder}
+          className="flex flex-col gap-3 mt-2 flex-1 justify-between"
+        >
+          <div>
+            <h3 className="text-xl font-semibold mb-2 text-center">
+              Vos informations
+            </h3>
+
+            <input
+              type="text"
+              placeholder="Nom complet"
+              required
+              value={formData.name}
+              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              className="border p-2 rounded-lg w-full"
+            />
+            <input
+              type="tel"
+              placeholder="Numéro de téléphone"
+              required
+              value={formData.phone}
+              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+              className="border p-2 rounded-lg w-full"
+            />
+            <textarea
+              placeholder="Adresse"
+              required
+              value={formData.address}
+              onChange={(e) =>
+                setFormData({ ...formData, address: e.target.value })
+              }
+              className="border p-2 rounded-lg w-full"
+            ></textarea>
+          </div>
+
+          {/* 🟢 Buttons */}
+          <div className="flex gap-2 mt-4">
+            <button
+              type="submit"
+              className="flex-1 bg-green-500 text-white font-semibold py-2 rounded-lg hover:bg-green-600 transition"
+            >
+              Envoyer la commande
+            </button>
+            <button
+              type="button"
+              onClick={() => setShowInfo(false)}
+              className="flex-1 bg-gray-300 text-gray-800 font-semibold py-2 rounded-lg hover:bg-gray-400 transition"
+            >
+              Retour
+            </button>
+          </div>
+        </form>
+      )}
+    </div>
+  );
+}

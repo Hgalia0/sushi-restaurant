@@ -1,0 +1,94 @@
+[
+  {
+    "category": "Maki",
+    "items": [
+      { "name": "Végétarien", "price": "690 DA", "image": "./images/suchimaki.jpg" },
+      { "name": "Avocat", "price": "890 DA", "image": "./images/californiaavocat.jpg" },
+      { "name": "Thon", "price": "890 DA", "image": "./images/makitho.jpg" },
+      { "name": "Surimi", "price": "1090 DA", "image": "./images/makisurmi.jpg" },
+      { "name": "Poulet Crispy", "price": "1090 DA", "image": "./images/cravocat.jpg" },
+      { "name": "Thon Avocat", "price": "1190 DA", "image": "./images/thonavocat.jpg" },
+      { "name": "Saumon", "price": "1390 DA", "image": "./images/saumon.jpg" }
+    ]
+  },
+  {
+    "category": "California Rolls",
+    "items": [
+      { "name": "Végétarien", "price": "790 DA", "image": "./images/californiaveg.jpg" },
+      { "name": "Avocat", "price": "990 DA", "image": "./images/californiaavocat.jpg" },
+      { "name": "Thon", "price": "990 DA", "image": "./images/californiaavocat.jpg" },
+      { "name": "Surimi", "price": "1190 DA", "image": "./images/californiaavocat.jpg" },
+      { "name": "Poulet Crispy", "price": "1190 DA", "image": "./images/californiaavocat.jpg" },
+      { "name": "Thon Avocat", "price": "1290 DA", "image": "./images/thonavocat.jpg" },
+      { "name": "Saumon", "price": "1490 DA", "image": "./images/saumon.jpg" }
+    ]
+  },
+  {
+    "category": "Crispy Rolls",
+    "items": [
+      { "name": "Végétarien", "price": "990 DA", "image": "./images/crv.jpg" },
+      { "name": "Avocat", "price": "1190 DA", "image": "./images/cravocat.jpg" },
+      { "name": "Thon", "price": "1190 DA", "image": "./images/crv.jpg" },
+      { "name": "Surimi", "price": "1390 DA", "image": "./images/criavocat.jpg" },
+      { "name": "Poulet Crispy", "price": "1390 DA", "image": "./images/crv.jpg" },
+      { "name": "Thon Avocat", "price": "1490 DA", "image": "./images/crv.jpg" },
+      { "name": "Saumon", "price": "1690 DA", "image": "./images/crv.jpg" }
+    ]
+  },
+  {
+    "category": "Signatures",
+    "items": [
+      { "name": "Tropical Roll (Saumon - Crevettes - Pêche)", "price": "1890 DA", "image": "./images/tropicalrole.jpg" },
+      { "name": "Volcano Roll (Saumon - Surimi - Fromage)", "price": "1890 DA", "image": "./images/volcano.jpg" },
+      { "name": "Golden Roll (Saumon - Avocat - Dorade)", "price": "1890 DA", "image": "./images/volcano.jpg" },
+      { "name": "Dragon Roll (Avocat - Crevette - Fromage)", "price": "1990 DA", "image": "./images/volcano.jpg" },
+      { "name": "Rainbow Roll (Avocat - Dorade - Surimi - Thon)", "price": "1990 DA", "image": "./images/volcano.jpg" }
+    ]
+  },
+  {
+    "category": "Nouilles",
+    "items": [
+      { "name": "Légumes", "price": "590 DA", "image": "./images/nouilletveg.jpg" },
+      { "name": "Poulet", "price": "790 DA", "image": "./images/nouilletpoulet.jpg" },
+      { "name": "Boeuf", "price": "890 DA", "image": "./images/nouilletpoulet.jpg" },
+      { "name": "Crevettes", "price": "1290 DA", "image": "./images/nouilletcrev.jpg" }
+    ]
+  },
+  {
+    "category": "Gyoza",
+    "items": [
+      { "name": "Gyoza au Boeuf (6 pièces)", "price": "990 DA", "image": "./images/gyozabf.jpg" },
+      { "name": "Gyoza au Boeuf (10 pièces)", "price": "1490 DA", "image": "./images/gyozabf.jpg" }
+    ]
+  },
+  {
+    "category": "Onigiri",
+    "items": [
+      { "name": "Thon (3 pièces)", "price": "690 DA", "image": "./images/ongiri.jpg" },
+      { "name": "Thon Épicé (3 pièces)", "price": "690 DA", "image": "./images/ongiri.jpg" },
+      { "name": "Avocat (3 pièces)", "price": "690 DA", "image": "./images/ongiri.jpg" },
+      { "name": "Saumon (3 pièces)", "price": "990 DA", "image": "./images/ongiri.jpg" }
+    ]
+  },
+  {
+    "category": "Crispy Sticks",
+    "items": [
+      { "name": "Merlan Pané (5 pièces)", "price": "500 DA", "image": "./images/crispystick.jpg" },
+      { "name": "Calamar Rings (5 pièces)", "price": "500 DA", "image": "./images/crispystick.jpg" },
+      { "name": "Mozza Sticks (5 pièces)", "price": "500 DA", "image": "./images/crispystick.jpg" },
+      { "name": "Merlan Pané (10 pièces)", "price": "—", "image": "./images/crispystick.jpg" },
+      { "name": "Calamar Rings (10 pièces)", "price": "—", "image": "./images/crispystick.jpg" },
+      { "name": "Mozza Sticks (10 pièces)", "price": "—", "image": "./images/crispystick.jpg" }
+    ]
+  },
+  {
+    "category": "Mochi",
+    "items": [
+      { "name": "Pistache", "price": "500 DA", "image": "./images/mochi.jpg" },
+      { "name": "Framboise", "price": "450 DA", "image": "./images/mochi.jpg" },
+      { "name": "Cassis", "price": "450 DA", "image": "./images/mochi.jpg" },
+      { "name": "Mangue", "price": "450 DA", "image": "./images/mochi.jpg" },
+      { "name": "Noix de Coco", "price": "450 DA", "image": "./images/mochi.jpg" }
+    ]
+  }
+]
