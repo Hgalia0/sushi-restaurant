@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import menuData from "../data/menu.json";
+import menuData from "../Data/menu.json";
 import Cart from "./Cart";
 
 export default function Menuu({ onAddToCart }) {

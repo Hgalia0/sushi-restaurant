@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import reviewsData from "../data/reviews.json";
+import reviewsData from "../Data/reviews.json";
 
 export default function Review() {
   const [current, setCurrent] = useState(0);
