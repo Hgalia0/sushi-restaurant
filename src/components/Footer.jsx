@@ -25,7 +25,10 @@ export default function Footer() {
 
                         <div className='flex items-center max-sm:ml-[-12px]'>
                             <img src="./local.png" alt="" className='w-6' />
-                            <p className="mb-1 text- underline sm:whitespace-nowrap hover:text-[#efa236]">Alger centre ,
+                            <p className="mb-1 max-sm:hidden underline sm:whitespace-nowrap hover:text-[#efa236]">Alger centre ,
+                                Métro khelifa boukhalfa</p>
+
+                                   <p className="mb-1  sm:hidden underline sm:whitespace-nowrap hover:text-[#efa236]">Alger centre ,<br />
                                 Métro khelifa boukhalfa</p>
                         </div>
                         <div className='flex items-center gap-2 ml-1 max-sm:ml-[-10px]'>
@@ -58,10 +61,10 @@ export default function Footer() {
 
                     
 
-                    <div className='flex  items-center gap-10  max-sm:gap-1 max-sm:whitespace-nowrap '>
+                    <div className='flex  items-center gap-10  max-sm:flex-col max-sm:gap-1 max-sm:whitespace-nowrap '>
 
 
-                        <p className="font-semibold  max-sm:ml-[-30px] text-xl max-sm:text-xl bg-gradient-to-r from-[#efa236] via-[#d49e4d] to-[#a09797] bg-clip-text text-transparent">
+                        <p className="font-semibold max-sm:ml-[-20px]  text-xl max-sm:text-xl bg-gradient-to-r from-[#efa236] via-[#d49e4d] to-[#a09797] bg-clip-text text-transparent">
                             Our platforms:
 
                         </p>
@@ -86,7 +89,8 @@ export default function Footer() {
                                 <img
                                     src="./wts.png"
                                     alt="Chat on WhatsApp"
-                                    className="w-11 ml-[-14px] hover:scale-110 transition"
+                                    className="w-11 ml-[-14px] hover:scale-110 transition 
+                                    "
                                 />
                             </a>
                         </div>
@@ -127,7 +131,7 @@ export default function Footer() {
                         href="https://www.google.com/maps/place/Sushi+garden/@36.7664541,3.0520793,16.75z/data=!4m6!3m5!1s0x128fb30021ff9a41:0xd21a18c4eac84814!8m2!3d36.7666735!4d3.054886!16s%2Fg%2F11vz1m3gqg?entry=ttu&g_ep=EgoyMDI1MTAyMC4wIKXMDSoASAFQAw%3D%3D"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-5 py-2 max-sm:px-2 bg-amber-400 text-white font-semibold rounded-lg hover:bg-amber-500 transition  max-sm:mt-[-80px] sm:mt-[-240px]"
+                        className="px-5 py-2 max-sm:px-2 bg-amber-400 text-white font-semibold rounded-lg hover:bg-amber-500 transition  max-sm:mt-[-60px] sm:mt-[-240px]"
                     >
                         View on Google Maps
                     </a>
