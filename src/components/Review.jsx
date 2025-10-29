@@ -2,24 +2,51 @@ import React, { useEffect, useState } from "react";
 import reviewsData from "../Data/reviews.json";
 
 export default function Review() {
-  const [current, setCurrent] = useState(0);
+
+
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [reviews, setReviews] = useState([]);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+
+  const itemsPerPage = 3;
+  const itemsPerPageMobile = 1;
 
   useEffect(() => {
     setReviews(reviewsData);
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  const items = reviews;
+  const totalPages = Math.ceil(
+    items.length / (isMobile ? itemsPerPageMobile : itemsPerPage)
+  );
+
   const nextSlide = () => {
-    if (current < reviews.length - 3) {
-      setCurrent(current + 1);
-    }
+    setCurrentIndex((prev) => (prev + 1) % totalPages);
   };
 
   const prevSlide = () => {
-    if (current > 0) {
-      setCurrent(current - 1);
-    }
+    setCurrentIndex((prev) =>
+      prev === 0 ? totalPages - 1 : prev - 1
+    );
   };
+
+  const visibleItems = isMobile
+    ? items.slice(
+        currentIndex * itemsPerPageMobile,
+        currentIndex * itemsPerPageMobile + itemsPerPageMobile
+      )
+    : items.slice(
+        currentIndex * itemsPerPage,
+        currentIndex * itemsPerPage + itemsPerPage
+      );
+
 
   return (
     <div className="relative w-full h-115 max-sm:h-109 bg-[#fcefdc] flex sm:items-center sm:justify-center overflow-hidden overflow-x-hidden">
@@ -57,48 +84,62 @@ export default function Review() {
             ‹
           </button>
 
-          <div className="max-sm:hidden grid md:grid-cols-3 gap-6 max-w-2xl mx-auto">
-            {reviews.slice(current, current + 3).map((review, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1"
-              >
-                <p className="italic text-[#5b4636] mb-4">
-                  “{review.comment}”
-                </p>
-                <div className="flex justify-center items-center space-x-1 mb-2">
-                  {Array(review.stars)
-                    .fill("⭐")
-                    .map((star, i) => (
-                      <span key={i}>{star}</span>
-                    ))}
-                </div>
-                <p className="font-semibold text-[#4b2e05]">{review.name}</p>
+         
+              {/* ✅ Desktop Grid */}
+            {!isMobile && (
+              <div className="max-sm:hidden grid md:grid-cols-3 gap-6 max-w-2xl mx-auto">
+                {visibleItems.map((review, index) => (
+                  <div
+                    key={index}
+                    className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1"
+                  >
+                    <p className="italic text-[#5b4636] mb-4">
+                      “{review.comment}”
+                    </p>
+                    <div className="flex justify-center items-center space-x-1 mb-2">
+                      {Array(review.stars)
+                        .fill("⭐")
+                        .map((star, i) => (
+                          <span key={i}>{star}</span>
+                        ))}
+                    </div>
+                    <p className="font-semibold text-[#4b2e05]">
+                      {review.name}
+                    </p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            )}
+       
 
 
           {/*mobile verion */}
           <div className=" sm:hidden  w-55  ml-10 mt-20">
-            {reviews.slice(current, current + 1).map((review, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1"
-              >
-                <p className="italic text-[#5b4636] mb-4">
-                  “{review.comment}”
-                </p>
-                <div className="flex justify-center items-center space-x-1 mb-2">
-                  {Array(review.stars)
-                    .fill("⭐")
-                    .map((star, i) => (
-                      <span key={i}>{star}</span>
-                    ))}
-                </div>
-                <p className="font-semibold text-[#4b2e05]">{review.name}</p>
+             {isMobile && (
+              <div className="sm:hidden flex justify-center">
+                {visibleItems.map((review, index) => (
+                  <div
+                    key={index}
+                    className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1 w-[280px]"
+                  >
+                    <p className="italic text-[#5b4636] mb-4">
+                      “{review.comment}”
+                    </p>
+                    <div className="flex justify-center items-center space-x-1 mb-2">
+                      {Array(review.stars)
+                        .fill("⭐")
+                        .map((star, i) => (
+                          <span key={i}>{star}</span>
+                        ))}
+                    </div>
+                    <p className="font-semibold text-[#4b2e05]">
+                      {review.name}
+                    </p>
+                  </div>
+                ))}
               </div>
-            ))}
+            )}
+
           </div>
 
           <button

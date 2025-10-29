@@ -59,7 +59,7 @@ export default function Cart({ cartItems = [], setCartItems }) {
               <div className="p-4 border-t mt-4">
                 <button
                   onClick={() => setShowInfo(true)}
-                  className="w-full bg-[#FEAA36] text-white font-semibold py-2 rounded-xl hover:bg-[#e2972e] transition-all"
+                  className="bg-[#e6d3b4] text-[#797979] font-semibold px-20 py-2 rounded-[12px] shadow-lg hover:bg-[#eae0cf] transition-all duration-300"
                 >
                   Commander
                 </button>
@@ -73,7 +73,7 @@ export default function Cart({ cartItems = [], setCartItems }) {
           onSubmit={handleOrder}
           className="flex flex-col gap-3 mt-2 flex-1 justify-between"
         >
-          <div>
+          <div className="flex flex-col gap-2">
             <h3 className="text-xl font-semibold mb-2 text-center">
               Vos informations
             </h3>
@@ -109,14 +109,17 @@ export default function Cart({ cartItems = [], setCartItems }) {
           <div className="flex gap-2 mt-4">
             <button
               type="submit"
-              className="flex-1 bg-green-500 text-white font-semibold py-2 rounded-lg hover:bg-green-600 transition"
+              className="bg-gradient-to-r from-[#efa236] via-[#d49e4d] to-[#6e6c6c]
+          text-white font-semibold px-4 py-2 rounded-[12px] shadow-lg
+          hover:from-[#dabd94] hover:via-[#e0c08f] hover:to-[#8b8686]
+          transition-all duration-300"
             >
               Envoyer la commande
             </button>
             <button
               type="button"
               onClick={() => setShowInfo(false)}
-              className="flex-1 bg-gray-300 text-gray-800 font-semibold py-2 rounded-lg hover:bg-gray-400 transition"
+              className="bg-[#e6d3b4] text-[#797979] font-semibold px-6 py-2 rounded-[12px] shadow-lg hover:bg-[#eae0cf] transition-all duration-300"
             >
               Retour
             </button>

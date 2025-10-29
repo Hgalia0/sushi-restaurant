@@ -9,6 +9,7 @@ import Overly from './components/Overly'
 import Menuu from './components/Menuu'
 import Review from './components/Review'
 import Footer from './components/Footer'
+import ScrollToTopButton from './components/ScrollToTopButton'
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -45,7 +46,7 @@ function App() {
 
 
 
-            <div className="relative z-10 sm:p-40  ">
+            <div className="relative  sm:p-40 z-0  ">
               <Home />
 
             </div>
@@ -53,23 +54,29 @@ function App() {
         </div>
 
 
+
+
         <div className='max-sm:mt-[-80px]'>
 
           <Overly />
         </div>
-        {/*making a brrier  */}
-        <div className='max-sm:hidden flex justify-center  items-center w-100 max-sm:w-80 mt-[-60px] max-sm:mt-[-160px] max-sm:ml-10 sm:ml-140'>
-          <img src="./chinese.png" alt="" className='' />
-        </div>
+        
+{/* making a barrier */}
+<div className="flex justify-center items-center mt-[-60px] sm:ml-[140px] max-sm:mt-[-100px]">
+  <img
+    src="./chinese.png"
+    alt=""
+    className="w-[400px] max-sm:w-[250px]" // 👈 smaller on mobile
+  />
+</div>
 
 
 
-        <br />
-        <br />
+      
         <div className='sm:mt-[-70px]max-sm:w-20'>
           <Menuu onAddToCart={handleAddToCart} />
         </div>
-        <div className='sm:mt-[-203px] max-sm:mt-[-180px] '>
+        <div className='sm:mt-[-203px] max-sm:mt-[-140px] '>
           <Review />
         </div>
 
@@ -80,13 +87,23 @@ function App() {
         </div>
 
 
-        <div>
-          <br />
-          <br />
-          <br />
-          <br />
+
+        {/* making a barrier */}
+<div className="sm:hidden flex justify-center items-center mt-[-60px] sm:ml-[140px] max-sm:mt-[10px]">
+  <img
+    src="./chinese.png"
+    alt=""
+    className="w-[400px] max-sm:w-[250px]" // 👈 smaller on mobile
+  />
+</div>
+
+
+
+        <div> 
+    
 
         </div>
+         <ScrollToTopButton  />
         <div className=''>
           <Footer />
         </div>

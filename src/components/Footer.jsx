@@ -2,79 +2,102 @@ import React from 'react'
 
 export default function Footer() {
     return (
-        <footer className="flex flex-col  md:flex-row w-full h-[400px] max-md:flex-col overflow-x-hidden">
+        <footer className="flex flex-col  md:flex-row w-full h-[400px] max-md:flex-col overflow-x-hidden" id='contact'>
             {/* Map Section */}
 
             {/* Info Section */}
-            <div className="w-120  bg-[#fcefdc] flex flex-col gap-2 justify-center p-6 max-sm:w-104">
-
-        
-             <div className='max-sm:flex'>
-
-              <div className=''>
-
-                <div className='flex items-center max-sm:ml-15 max-sm:mt-[-10px]'>
-                    <p className="text-4xl  font-bold bg-gradient-to-r from-[#efa236] via-[#4e4f50] to-[#000000] bg-clip-text text-transparent">
-                        sushigarden
-                    </p>
+            <div className="w-122  bg-[#fcefdc] flex flex-col gap-2 justify-center p-6 max-sm:w-104">
 
 
-                    <img src="./footersushi.png" alt="" className="w-16" />
-                </div>
+                <div className='max-sm:flex'>
+
+                    <div className=''>
+
+                        <div className='flex items-center max-sm:ml-15 max-sm:mt-[-10px]'>
+                            <p className="text-4xl  font-bold bg-gradient-to-r from-[#efa236] via-[#4e4f50] to-[#000000] bg-clip-text text-transparent">
+                                sushigarden
+                            </p>
 
 
-                <div className='flex items-center max-sm:ml-[-12px]'>
-                    <img src="./local.png" alt="" className='w-8' />
-                    <p className="mb-1 text-[#696c70]">Alger centre ,<br />
-                     Métro khelifa boukhalfa</p>
-                </div>
-                <div className='flex items-center gap-2 ml-1 max-sm:ml-[-10px]'>
-                    <img src="./clock.png" alt="" className='w-6' />
-                    <p className='text-[#696c70] m'>De 10h à 23h30</p>
-
-                </div>
-                <br />
-              </div>
+                            <img src="./footersushi.png" alt="" className="w-16" />
+                        </div>
 
 
+                        <div className='flex items-center max-sm:ml-[-12px]'>
+                            <img src="./local.png" alt="" className='w-6' />
+                            <p className="mb-1 text- underline sm:whitespace-nowrap hover:text-[#efa236]">Alger centre ,
+                                Métro khelifa boukhalfa</p>
+                        </div>
+                        <div className='flex items-center gap-2 ml-1 max-sm:ml-[-10px]'>
+                            <img src="./clock.png" alt="" className='w-4    ' />
+                            <p className='text- m'>De 10h à 23h30</p>
 
-                <div className='flex  items-center gap-10 max-sm:flex-col max-sm:gap-5 max-sm:whitespace-nowrap max-sm:mt-14'>
+                        </div>
+                        <br />
 
 
-                    <p className="font-bold  max-sm:ml-[-30px] text-3xl max-sm:text-xl bg-gradient-to-r from-[#efa236] via-[#d49e4d] to-[#a09797] bg-clip-text text-transparent">
-                        Our platforms:
 
-                    </p>
-
-                    <div className=" flex items-center gap-5 mt-[px] ">
-                        <a
-                            href="https://instagram.com/yourusername"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <img
-                                src="./insta.png"
-                                alt="Profile"
-                                className="w-10 hover:scale-105 transition"
-                            />
-                        </a>
-                        <a
-                            href="https://wa.me/213555123456"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <img
-                                src="./wts.png"
-                                alt="Chat on WhatsApp"
-                                className="w-13 ml-[-14px] hover:scale-110 transition"
-                            />
-                        </a>
                     </div>
-                </div>
-             </div>
 
 
-                <div className="bg-amber-100 text-center py-4 sm:mt-38 sm:w-120 max-sm:w-40 sm:ml-[-30px] max-sm:hidden">
+                 <div className='max-sm:flex-col max-sm:mt-13'>
+                    <div className="flex flex-col gap-0 ">
+                        <p className="text-xl font-bold text-[#efa236]">Quick Links</p>
+                        <a href="#menu" className="text-[#4b2e05] underline hover:text-[#efa236]">Menu</a>
+                        <a href="#about" className="text-[#4b2e05] underline hover:text-[#efa236]">About Us</a>
+                        <a href="#contact" className="text-[#4b2e05] underline hover:text-[#efa236]">Contact</a>
+                    </div>
+
+
+                    <div className='max-sm:hidden'>
+                    <br />
+                    <div className='border border-t-[#efa236] w-105'></div>
+                    <br />
+                    </div>
+
+
+                    
+
+                    <div className='flex  items-center gap-10  max-sm:gap-1 max-sm:whitespace-nowrap '>
+
+
+                        <p className="font-semibold  max-sm:ml-[-30px] text-xl max-sm:text-xl bg-gradient-to-r from-[#efa236] via-[#d49e4d] to-[#a09797] bg-clip-text text-transparent">
+                            Our platforms:
+
+                        </p>
+
+                        <div className=" flex items-center gap-5 mt-[px] ">
+                            <a
+                                href="https://instagram.com/yourusername"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img
+                                    src="./insta.png"
+                                    alt="Profile"
+                                    className="w-8 hover:scale-105 transition"
+                                />
+                            </a>
+                            <a
+                                href="https://wa.me/213555123456"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img
+                                    src="./wts.png"
+                                    alt="Chat on WhatsApp"
+                                    className="w-11 ml-[-14px] hover:scale-110 transition"
+                                />
+                            </a>
+                        </div>
+                    </div>
+
+                 </div>
+                    <br />
+
+                   <div className='border border-t-[#efa236] w-105 max-sm:hidden'></div>
+
+                <div className=" text-center italic sm:w-120 max-sm:w-40 sm:ml-[-30px]  max-sm:hidden">
                     <p className="text-[#4b2e05] font-medium">
                         Made by <span className="font-bold">Galia Nourh ❤️</span> —{" "}
                         <a
@@ -87,8 +110,11 @@ export default function Footer() {
                         </a>
                     </p>
                 </div>
+
+                </div>
+
             </div>
-            <img src="./hand.png" alt="" className='absolute max-sm:hidden w-80 mt-[-50px] ml-80 z-10' />
+            <img src="./bg3.png" alt="" className='absolute max-sm:hidden w-67 mt-[0px] ml-55 z-10' />
 
 
 
@@ -101,25 +127,25 @@ export default function Footer() {
                         href="https://www.google.com/maps/place/Sushi+garden/@36.7664541,3.0520793,16.75z/data=!4m6!3m5!1s0x128fb30021ff9a41:0xd21a18c4eac84814!8m2!3d36.7666735!4d3.054886!16s%2Fg%2F11vz1m3gqg?entry=ttu&g_ep=EgoyMDI1MTAyMC4wIKXMDSoASAFQAw%3D%3D"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-5 py-2 bg-amber-400 text-white font-semibold rounded-lg hover:bg-amber-500 transition mt-[-70px]"
+                        className="px-5 py-2 max-sm:px-2 bg-amber-400 text-white font-semibold rounded-lg hover:bg-amber-500 transition  max-sm:mt-[-80px] sm:mt-[-240px]"
                     >
                         View on Google Maps
                     </a>
                 </div>
             </div>
             <div className="bg-amber-100 text-center py-4 sm:mt-30 sm:w-120 max-sm:w-105 sm:ml-[-30px] h-8 sm:hidden">
-                    <p className="text-[#4b2e05] font-medium mt-[-10px]">
-                        Made by <span className="font-bold">Galia Nourh ❤️</span> —{" "}
-                        <a
-                            href="https://www.instagram.com/coffeecode.dz/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="underline transition hover:text-red-500"
-                        >
-                            Visit my Instagram
-                        </a>
-                    </p>
-                </div>
+                <p className="text-[#4b2e05] font-medium mt-[-10px]">
+                    Made by <span className="font-bold">Galia Nourh ❤️</span> —{" "}
+                    <a
+                        href="https://www.instagram.com/coffeecode.dz/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="underline transition hover:text-red-500"
+                    >
+                        Visit my Instagram
+                    </a>
+                </p>
+            </div>
 
 
         </footer>

@@ -46,7 +46,7 @@ const visiblemobile = items.slice(
     };
 
     return (
-        <div className="p-10 min-h-screen">
+        <div className="p-10 min-h-screen" id="menu">
             {/* 🍣 Category Buttons */}
             <div className="flex flex-wrap justify-center gap-4 mb-10">
                 {/* Add "All" button first */}
@@ -137,14 +137,14 @@ const visiblemobile = items.slice(
                             <div className="absolute inset-0 bg-[#f3c079]/30 transition-all duration-300 group-hover:bg-[#f3c079]/60"></div>
 
                             {/* 🍣 Content on top */}
-                            <div className="relative z-10 flex  gap-20 h-full text-white p-4">
+                            <div className="relative z-10 flex flex-col justify-center items-center gap-13 h-full text-white p-4">
                                 <div className="flex flex-col">
-                                    <h3 className="mt-3 font-semibold text-2xl  drop-shadow-[0_3px_3px_rgba(0,0,0,0.5)]">{item.name}</h3>
+                                    <h3 className="mt-3  font-semibold text-[16px]  drop-shadow-[0_3px_3px_rgba(0,0,0,0.5)] w-40">{item.name}</h3>
                                     <p className="text-lg mt-1 drop-shadow">{item.price}</p>
 
                                 </div>
 
-                                <button onClick={() => onAddToCart(item)} className="mt-4 text-2xl bg-white/10 backdrop-blur-md text-white w-10 h-10 rounded-lg shadow-lg hover:scale-105 transition flex justify-center items-center drop-shadow-[0_3px_3px_rgba(0,0,0,0.5)]">
+                                <button onClick={() => onAddToCart(item)} className="  text-2xl bg-white/10 backdrop-blur-md text-white w-15 h-15 rounded-lg shadow-lg hover:scale-105 transition flex justify-center items-center drop-shadow-[0_3px_3px_rgba(0,0,0,0.5)]">
                                     +
                                 </button>
 
@@ -155,7 +155,7 @@ const visiblemobile = items.slice(
                 {/* Next Button */}
                 <button
                     onClick={next}
-                    className="absolute sm:right-0 max-sm:right-[-20px]  bg-orange-100 text-gray-400 text-3xl px-4 py-2 rounded-full shadow-md hover:opacity-90 transition"
+                    className="absolute sm:right-0 max-sm:right-[-30px]  bg-orange-100 text-gray-400 text-3xl px-4 py-2 rounded-full shadow-md hover:opacity-90 transition"
                 >
                     ›
                 </button>

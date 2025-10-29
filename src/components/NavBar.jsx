@@ -55,7 +55,7 @@ export default function NavBar({ cartCount, cartItems, setCartItems }) {
         <img src="./lamp.png" alt="" className="w-20 sm:ml-100 max-sm:w-0" />
 
         {/* 🛒 Cart Icon */}
-        <div className="relative cursor-pointer" onClick={() => setOpen(!open)}>
+        <div className="relative cursor-pointer " onClick={() => setOpen(!open)}>
           <img src="./card.png" alt="cart" className="w-8 mt-[-40px]" />
           {cartCount > 0 && (
             <span className="absolute top-[-35px] right-0 bg-red-500 w-3 h-3 rounded-full"></span>
@@ -86,7 +86,7 @@ export default function NavBar({ cartCount, cartItems, setCartItems }) {
 
       {/* Mobile Menu Dropdown */}
       {opened && (
-        <div className="absolute top-full left-0 w-95 bg-white shadow-lg flex flex-col items-center  py-4 gap-4 text-gray-700 font-semibold sm:hidden animate-fadeIn">
+        <div className="absolute border border-amber-800  top-full left-0 w-100 bg-white shadow-lg flex p-10 flex-col items-center  py-4 gap-2 text-gray-700 font-semibold sm:hidden animate-fadeIn">
           <a
             href="#home"
             className="w-full text-right py-2 hover:bg-[#FEAA36] hover:text-white transition-all duration-300"
@@ -94,6 +94,7 @@ export default function NavBar({ cartCount, cartItems, setCartItems }) {
           >
             Home
           </a>
+    <div className='border border-t-[#efa236] w-90'></div>
           <a
             href="#menu"
             className="w-full text-right py-2 hover:bg-[#FEAA36] hover:text-white transition-all duration-300"
@@ -101,6 +102,7 @@ export default function NavBar({ cartCount, cartItems, setCartItems }) {
           >
             Menu
           </a>
+          <div className='border border-t-[#efa236] w-90'></div>
           <a
             href="#contact"
             className="w-full text-right py-2 hover:bg-[#FEAA36] hover:text-white transition-all duration-300"

@@ -24,3 +24,6 @@ body{
 .cart-scroll::-webkit-scrollbar-thumb:hover {
   background: #e2972e;
 }
+html {
+  scroll-behavior: smooth;
+}
