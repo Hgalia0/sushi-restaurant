@@ -21,6 +21,9 @@ export default function Cart({ cartItems = [], setCartItems }) {
     setFormData({ name: "", phone: "", address: "" });
   };
 
+
+
+
   return (
     <div className="">
       <h2 className="text-2xl font-bold mb-4 text-center">🛒 Votre Panier</h2>
@@ -45,6 +48,15 @@ export default function Cart({ cartItems = [], setCartItems }) {
                     />
                     <p className="text-sm font-medium">{item.name}</p>
                     <p className="text-sm text-gray-600">{item.price}</p>
+                    <button
+                      className="ml-2 text-red-500 font-bold hover:text-red-700"
+                      onClick={() => {
+                        const newCart = cartItems.filter((_, index) => index !== i);
+                        setCartItems(newCart); // update cart
+                      }}
+                    >
+                      ✕
+                    </button>
                   </div>
                 ))}
               </div>

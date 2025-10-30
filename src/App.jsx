@@ -31,7 +31,7 @@ function App() {
             }}
           />
           <div
-            className="sm:hidden absolute inset-0 bg-no-repeat    bg-cover  max-sm:ml-[-3px]  max-sm:w-[500px] max-sm:h-[360px]   overflow-hidden z-[-1]"
+            className="sm:hidden absolute inset-0 bg-no-repeat    bg-cover  max-sm:ml-[10px]  max-sm:w-[460px] max-sm:h-[360px]   overflow-hidden z-[-1]"
             style={{
               backgroundImage: "url('./sushimobile.png')",
             }}

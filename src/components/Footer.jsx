@@ -37,13 +37,47 @@ export default function Footer() {
 
                         </div>
                         <br />
+                        
+                    <div className='flex sm:hidden ml-[-160px]  mt-[-20px] items-center gap-10  max-sm:flex-col max-sm:gap-1 max-sm:whitespace-nowrap '>
 
 
+                        <p className="font-semibold max-sm:ml-[-20px]  text-xl max-sm:text-xl bg-gradient-to-r from-[#efa236] via-[#d49e4d] to-[#a09797] bg-clip-text text-transparent">
+                            Our platforms:
+
+                        </p>
+
+                        <div className=" flex items-center gap-5 mt-[px] ">
+                            <a
+                                href="https://www.instagram.com/sushigardendz/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img
+                                    src="./insta.png"
+                                    alt="Profile"
+                                    className="w-8 hover:scale-105 transition"
+                                />
+                            </a>
+                            <a
+                                href="https://wa.me/213540454162"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                <img
+                                    src="./wts.png"
+                                    alt="Chat on WhatsApp"
+                                    className="w-11 ml-[-14px] hover:scale-110 transition 
+                                    "
+                                />
+                            </a>
+                        </div>
+                    </div>
+                  
 
                     </div>
 
 
-                 <div className='max-sm:flex-col max-sm:mt-13'>
+                 <div className='max-sm:flex-col max-sm:mt-13 max-sm:ml-[-40px]'>
                     <div className="flex flex-col gap-0 ">
                         <p className="text-xl font-bold text-[#efa236]">Quick Links</p>
                         <a href="#menu" className="text-[#4b2e05] underline hover:text-[#efa236]">Menu</a>
@@ -61,7 +95,7 @@ export default function Footer() {
 
                     
 
-                    <div className='flex  items-center gap-10  max-sm:flex-col max-sm:gap-1 max-sm:whitespace-nowrap '>
+                    <div className='flex  max-sm:hidden items-center gap-10  max-sm:flex-col max-sm:gap-1 max-sm:whitespace-nowrap '>
 
 
                         <p className="font-semibold max-sm:ml-[-20px]  text-xl max-sm:text-xl bg-gradient-to-r from-[#efa236] via-[#d49e4d] to-[#a09797] bg-clip-text text-transparent">
@@ -71,7 +105,7 @@ export default function Footer() {
 
                         <div className=" flex items-center gap-5 mt-[px] ">
                             <a
-                                href="https://instagram.com/yourusername"
+                                href="https://www.instagram.com/sushigardendz/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -82,7 +116,7 @@ export default function Footer() {
                                 />
                             </a>
                             <a
-                                href="https://wa.me/213555123456"
+                                href="https://wa.me/213540454162"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -137,7 +171,7 @@ export default function Footer() {
                     </a>
                 </div>
             </div>
-            <div className="bg-amber-100 text-center py-4 sm:mt-30 sm:w-120 max-sm:w-105 sm:ml-[-30px] h-8 sm:hidden">
+            <div className="italic text-center py-4 sm:mt-30 sm:w-120 max-sm:w-105 sm:ml-[-30px] h-8 sm:hidden">
                 <p className="text-[#4b2e05] font-medium mt-[-10px]">
                     Made by <span className="font-bold">Galia Nourh ❤️</span> —{" "}
                     <a

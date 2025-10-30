@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 export default function Overly() {
   const deskVideos = ["/sushi1.mp4", "/sushi2.mp4", "/sushi3.mp4"];
-  const mobileVideos = [ "/woman.mp4"];
+  const mobileVideos = ["/woman.mp4"];
 
   const [currentVideo, setCurrentVideo] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
@@ -38,7 +38,7 @@ export default function Overly() {
     vid.load();
     const playPromise = vid.play();
     if (playPromise !== undefined) {
-      playPromise.catch(() => {}); // ignore autoplay errors
+      playPromise.catch(() => { }); // ignore autoplay errors
     }
 
     const handleEnded = () => {
@@ -54,18 +54,34 @@ export default function Overly() {
     <div className="relative w-full h-150 overflow-hidden overflow-x-hidden">
       {/* 🎥 Background video */}
       <video
-            ref={videoRef}
-        src={videos[currentVideo]}
+      
+        src="/fullvideopc.mp4"
         autoPlay
         muted
         playsInline
         preload="auto"
         loop={false}
-        poster="/fallback.jpg"
-        className="absolute inset-0 w-full h-full max-sm:w-105 max-sm:h-120 object-cover z-[-2] transition-opacity duration-700"
+      
+        className="max-sm:hidden absolute inset-0 w-full h-full max-sm:w-105 max-sm:h-120 object-cover z-[-2] transition-opacity duration-700"
       />
 
+
+      <video
+        src="/fullvideo.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="sm:hidden absolute inset-0 w-full h-full max-sm:w-105 max-sm:h-120 object-cover z-[-2] transition-opacity duration-700"
+      >
+        Your browser does not support the video tag.
+      </video>
+
+
       <div className="absolute inset-0 bg-orange-200/40 z-[-1] max-sm:h-120 max-sm:w-105" />
+
+
+
 
       <div className="relative z-10 flex flex-col items-center gap-20 justify-center h-full text-center text-gray-800">
         <div className="flex flex-col items-center gap-10 max-sm:mt-[-80px]">
