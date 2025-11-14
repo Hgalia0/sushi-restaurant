@@ -85,7 +85,7 @@ const visiblemobile = items.slice(
                 {/* Prev Button */}
                 <button
                     onClick={prev}
-                    className="absolute left-0 max-sm:left-[-30px] bg-orange-100 text-gray-400 text-3xl px-4 py-2 rounded-full shadow-md hover:opacity-90 transition"
+                    className="absolute left-0 max-sm:left-[-30px]  text-gray-400 text-3xl px-4 py-2 rounded-full  hover:opacity-90 transition"
                 >
                     ‹
                 </button>
@@ -155,7 +155,7 @@ const visiblemobile = items.slice(
                 {/* Next Button */}
                 <button
                     onClick={next}
-                    className="absolute sm:right-0 max-sm:right-[-30px]  bg-orange-100 text-gray-400 text-3xl px-4 py-2 rounded-full shadow-md hover:opacity-90 transition"
+                    className="absolute sm:right-0 max-sm:right-[-30px]   text-gray-400 text-3xl px-4 py-2 rounded-full hover:opacity-90 transition"
                 >
                     ›
                 </button>
